@@ -33,9 +33,6 @@ public class LoginSteps  {
         welcomePage = new WelcomePage(driver);
         welcomePage.verifyTitle();
 
-//        homePage = new HomePage(driver);
-//        homePage.clickOnZalogujSie();
-
     }
 
     @When("^user enters \"([^\"]*)\" and \"([^\"]*)\"$")
@@ -55,7 +52,6 @@ public class LoginSteps  {
 
     @Then("user is login and navigated to home page")
     public void userIsNavigatedToHomePage() {
-        // Write code here that turns the phrase above into concrete actions
         homePage = new HomePage(driver);
         homePage.verifyHomePage();
         driver.quit();
